@@ -5,7 +5,7 @@ import styles from './styles';
 const Container = ({ children }) => <View style={styles.container}>{children}</View>;
 
 Container.PropTypes = {
-  children: PropTypes.number.isRequired,
+  children: PropTypes.element.isRequired,
 };
 
 export default Container;
