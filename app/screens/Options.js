@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { ScrollView, StatusBar, View, Platform } from 'react-native';
 import { ListItem, Separator } from '../components/List';
 import { Ionicons } from '@expo/vector-icons';
@@ -8,8 +8,12 @@ const ICON_COLOR = '#868686';
 const ICON_SIZE = 23;
 
 class Options extends Component {
+  static propTypes = {
+    navigation: PropTypes.object,
+  };
   handleThemesPress = () => {
     console.log('press themes');
+    this.props.navigation.navigate('Themes');
   };
 
   handleSitePress = () => {
@@ -21,7 +25,7 @@ class Options extends Component {
       <ScrollView>
         <StatusBar translucent={false} barStyle="default" />
         {/* To avoid notch. */}
-        <View style={{ height: 44 }} />
+        <View style={{ height: 0 }} />
         <ListItem
           text="Themes"
           onPress={this.handleThemesPress}
