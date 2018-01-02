@@ -5,7 +5,7 @@ import CurrencyList from './screens/CurrencyList';
 import Options from './screens/Options';
 import Themes from './screens/Themes';
 import Navigator from './config/routes';
-import { AlertProvider } from './components/Alert'
+import { AlertProvider } from './components/Alert';
 
 EStyleSheet.build({
   $primaryBlue: '#4F6D7A',
@@ -23,4 +23,8 @@ EStyleSheet.build({
 // export default () => <CurrencyList />;
 // export default () => <Options />;
 // export default () => <Themes />;
-export default () => <AlertProvider><Navigator /></AlertProvider>;
+export default () => (
+  <AlertProvider>
+    <Navigator />
+  </AlertProvider>
+);
