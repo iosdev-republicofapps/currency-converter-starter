@@ -22,6 +22,5 @@ export const CHANGE_QUOTE_CURRENCY = 'CHANGE_QUOTE_CURRENCY';
 
 export const changeQuoteCurrency = currency => ({
   type: CHANGE_QUOTE_CURRENCY,
-  currency
+  currency,
 });
-
