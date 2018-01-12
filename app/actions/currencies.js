@@ -24,3 +24,9 @@ export const changeQuoteCurrency = currency => ({
   type: CHANGE_QUOTE_CURRENCY,
   currency,
 });
+
+export const GET_INITIAL_CONVERSION = 'GET_INITIAL_CONVERSION';
+
+export const getInitialConversion = () => ({
+  type: GET_INITIAL_CONVERSION,
+});

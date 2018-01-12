@@ -9,7 +9,7 @@ import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
 import { connect } from 'react-redux';
 
-import { swapCurrency, changeCurrencyAmount } from '../actions/currencies';
+import { swapCurrency, changeCurrencyAmount, getInitialConversion } from '../actions/currencies';
 
 class Home extends Component {
   static propTypes = {
@@ -23,6 +23,11 @@ class Home extends Component {
     lastConvertedDate: PropTypes.object,
     primaryColor: PropTypes.string,
   };
+
+  componentWillMount() {
+    this.props.dispatch(getInitialConversion());
+  }
+
   handlePressBaseCurrency = () => {
     console.log('press base');
     this.props.navigation.navigate('CurrencyList', { title: 'Base Currency', type: 'base' });
