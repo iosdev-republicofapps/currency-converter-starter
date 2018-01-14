@@ -18,7 +18,7 @@ const rootSagaFn = function* rootSaga() {
   yield takeEvery(CHANGE_BASE_CURRENCY, fetchLatestConversionRatesFn);
 };
 
-const getLatestRate = currency => fetch(`http://api.fixer.io/latest?base=${currency}`);
+const getLatestRate = currency => fetch(`http://api.fixer.io/latest?base=${currency}sdsd`);
 
 const fetchLatestConversionRatesFn = function* fetchLatestConversionRates(action) {
   try {
